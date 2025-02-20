@@ -1,22 +1,7 @@
-"""
-arr=10 80 30 90 40 low=0 high=4
-pivot=40
-i=-1
-for(j=0;j<4;j++)
-{
-i=-1 j=0 10<40 True
-i=0 
-arr= 10 80 30 90 40
-i=0 j=1 80<40 False
-i=0
-arr= 10 80 30 90 40
-i=0 j=2 30<40 True
-i=1
-arr=10 30 80 90 40
-}
-i=1 j=4 
-arr=10 30 40 80 90
-return 2
+from array_partition import partition
 
-"""
-
+def quick_sort(array, beginning, end):
+    if beginning < end:
+        pivot_index = partition(array, beginning, end)
+        quick_sort(array, beginning, pivot_index-1)
+        quick_sort(array, pivot_index+1, end)
