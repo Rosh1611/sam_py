@@ -1,0 +1,17 @@
+emp_name=input("Enter Employee Name : ")
+emp_id=int(input("Enter Employee ID : "))
+basic_monthly_salary=float(input("Enter Basic Monthly Salary : "))
+special_allowance=float(input("Enter Monthly Special Allowances : "))
+bonus_percentage=float(input("Enter Annual Bonus Percentage : "))
+monthly_gross_salary=basic_monthly_salary+special_allowance
+bonus=(bonus_percentage/100)*(monthly_gross_salary*12)
+annual_gross_salary=(monthly_gross_salary*12)+bonus
+print()
+print("Employee Details".center(51))
+print("-"*51)
+print("%s:%25s"%("Employee Name".ljust(25),emp_name))
+print("%s:%25d"%("Employee ID".ljust(25),emp_id))
+print("%s:%25.2f"%("Gross Monthly Salary".ljust(25),monthly_gross_salary))
+print("%s:%25.2f"%("Bonus".ljust(25),bonus))
+print("%s:%25.2f"%("Annual Gross Salary".ljust(25),annual_gross_salary))
+print("-"*51)
