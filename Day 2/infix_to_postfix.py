@@ -22,4 +22,6 @@ def in_stack(ch):
         return 0
     if ch=='#':
         return -1
-infix=input()
+stack=[]
+infix=input("Enter The Infix Expression : ")
+for ch in infix:

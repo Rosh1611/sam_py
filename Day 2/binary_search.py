@@ -10,4 +10,3 @@ def binary_search(array,search_element):
         else:
             end=middle-1
     return -1
-    
